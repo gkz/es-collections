@@ -34,6 +34,12 @@ suite("Stack", () => {
         equal(s.size, 0);
         equal(s.peek(), undefined);
     });
+    test("clear", () => {
+        const s = new Stack([1, 2, 3]);
+        equal(s.size, 3);
+        s.clear();
+        equal(s.size, 0);
+    });
     test("forEach", () => {
         const s = new Stack([1, 2, 3]);
         let i = 3;

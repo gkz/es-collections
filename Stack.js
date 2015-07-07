@@ -19,6 +19,9 @@ export default class {
     peek() {
         return this[data][this[data].length - 1];
     }
+    clear() {
+        this[data] = [];
+    }
     get size() {
         return this[data].length;
     }

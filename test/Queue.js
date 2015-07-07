@@ -34,6 +34,12 @@ suite("Queue", () => {
         equal(q.size, 0);
         equal(q.peek(), undefined);
     });
+    test("clear", () => {
+        const q = new Queue([1, 2, 3]);
+        equal(q.size, 3);
+        q.clear();
+        equal(q.size, 0);
+    });
     test("forEach", () => {
         const q = new Queue([1, 2, 3]);
         let i = 1;
