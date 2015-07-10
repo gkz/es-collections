@@ -17,6 +17,13 @@ suite("Stack", () => {
         equal(s.pop(), 1);
         equal(s.size, 0);
     });
+    test("chained push", () => {
+        const s = new Stack();
+        s.push(1).push(2).push(3);
+        equal(s.size, 3);
+        equal(s.pop(), 3);
+        equal(s.size, 2);
+    });
     test("pop empty", () => {
         const s = new Stack();
         equal(s.size, 0);

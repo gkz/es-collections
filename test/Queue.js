@@ -17,6 +17,13 @@ suite("Queue", () => {
         equal(q.dequeue(), 1);
         equal(q.size, 0);
     });
+    test("chained enqueue", () => {
+        const q = new Queue();
+        q.enqueue(1).enqueue(2).enqueue(3);
+        equal(q.size, 3);
+        equal(q.dequeue(), 1);
+        equal(q.size, 2);
+    });
     test("dequeue empty", () => {
         const q = new Queue();
         equal(q.size, 0);
