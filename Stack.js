@@ -22,6 +22,14 @@ export default class {
     clear() {
         this[data] = [];
     }
+    has(item) {
+        for(let i = 0; i < this.size; i++) {
+            if (item === this[data][i]) {
+                return true;
+            }
+        }
+        return false;
+    }
     get size() {
         return this[data].length;
     }

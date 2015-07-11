@@ -47,6 +47,11 @@ suite("Stack", () => {
         s.clear();
         equal(s.size, 0);
     });
+    test("has", () => {
+        const s = new Stack([1, 2, 3]);
+        equal(s.has(2), true);
+        equal(s.has(4), false);
+    });
     test("forEach", () => {
         const s = new Stack([1, 2, 3]);
         let i = 3;

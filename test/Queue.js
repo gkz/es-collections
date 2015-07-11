@@ -47,6 +47,11 @@ suite("Queue", () => {
         q.clear();
         equal(q.size, 0);
     });
+    test("has", () => {
+        const q = new Queue([1, 2, 3]);
+        equal(q.has(2), true);
+        equal(q.has(4), false);
+    });
     test("forEach", () => {
         const q = new Queue([1, 2, 3]);
         let i = 1;
