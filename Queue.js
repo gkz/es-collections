@@ -45,8 +45,8 @@ export default class {
         }
     }
     *[Symbol.iterator]() {
-        for (const item of this[data]) {
-            yield item;
+        for (let i = 0; i < this.size; i++) {
+            yield this[data][i];
         }
     }
 }
