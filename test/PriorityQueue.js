@@ -52,6 +52,19 @@ suite("PriorityQueue", () => {
         equal(q.remove(), 1);
         equal(q.size, 0);
     });
+    test("natural min with strings", () => {
+        const q = PriorityQueue.newNaturalMin();
+        q.add("hello");
+        q.add("hell");
+        q.add("he");
+        q.add("gell");
+        equal(q.size, 4);
+        equal(q.remove(), "gell");
+        equal(q.remove(), "he");
+        equal(q.remove(), "hell");
+        equal(q.remove(), "hello");
+        equal(q.size, 0);
+    });
     test("objects as items", () => {
         const q = new PriorityQueue((a, b) => a.val - b.val);
         q.add({val: 4});
