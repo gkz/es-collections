@@ -1,5 +1,5 @@
 import {strictEqual as equal, throws} from "assert";
-import PriorityQueue from "../PriorityQueue";
+import PriorityQueue from "../src/PriorityQueue";
 
 suite("PriorityQueue", () => {
     test("new, no comparator", () => {

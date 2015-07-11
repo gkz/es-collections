@@ -1,5 +1,5 @@
 import {strictEqual as equal} from "assert";
-import Stack from "../Stack";
+import Stack from "../src/Stack";
 
 suite("Stack", () => {
     test("new with iterator", () => {

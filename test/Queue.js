@@ -1,5 +1,5 @@
 import {strictEqual as equal} from "assert";
-import Queue from "../Queue";
+import Queue from "../src/Queue";
 
 suite("Queue", () => {
     test("new with iterator", () => {
