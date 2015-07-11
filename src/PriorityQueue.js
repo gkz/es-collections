@@ -128,14 +128,8 @@ export default class PriorityQueue {
         return this[data].length;
     }
     forEach(callback, thisArg) {
-        if (thisArg) {
-            for (const item of this) {
-                callback.call(thisArg, item, this);
-            }
-        } else {
-            for (const item of this) {
-                callback(item, this);
-            }
+        for (const item of this) {
+            callback.call(thisArg, item, this);
         }
     }
     *[Symbol.iterator]() {
