@@ -2,10 +2,10 @@ import {strictEqual as equal, throws} from "assert";
 import PriorityQueue from "../src/PriorityQueue";
 
 suite("PriorityQueue", () => {
-    test("new, no comparator", () => {
-        throws(() => new PriorityQueue(), "PriorityQueue: no comparator function defined");
+    test("new, no compareFunction", () => {
+        throws(() => new PriorityQueue(), "PriorityQueue: no compareFunction defined");
     });
-    test("new with comparator", () => {
+    test("new with compareFunction", () => {
         const q = new PriorityQueue((a, b) => a - b);
         q.add(3);
         q.add(1);

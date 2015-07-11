@@ -1,17 +1,17 @@
-function heapify(data, comparator) {
+function heapify(data, compareFunction) {
     for (let i = Math.floor((data.length - 2) / 2); i >= 0; i--) {
-        sink(data, comparator, i);
+        sink(data, compareFunction, i);
     }
     return data;
 }
 
-function bubbleUp(data, comparator, index) {
+function bubbleUp(data, compareFunction, index) {
     const value = data[index];
 
     while (index > 0) {
         const parentIndex = Math.floor((index - 1) / 2);
         const parent = data[parentIndex];
-        if (comparator(value, parent) < 0) {
+        if (compareFunction(value, parent) < 0) {
             data[index] = parent;
         } else {
             break;
@@ -22,17 +22,17 @@ function bubbleUp(data, comparator, index) {
     return index;
 }
 
-function sink(data, comparator, index) {
+function sink(data, compareFunction, index) {
     const value = data[index];
     const size = data.length;
 
     while (2 * index + 1 < size) {
         let targetIndex = 2 * index + 1;
         if (targetIndex < size - 1
-                && comparator(data[targetIndex + 1], data[targetIndex]) < 0) {
+                && compareFunction(data[targetIndex + 1], data[targetIndex]) < 0) {
             targetIndex++;
         }
-        if (comparator(data[index], data[targetIndex]) <= 0) {
+        if (compareFunction(data[index], data[targetIndex]) <= 0) {
             break;
         }
         data[index] = data[targetIndex];
@@ -43,7 +43,7 @@ function sink(data, comparator, index) {
 }
 
 const data = Symbol("data");
-const comp = Symbol("comparator");
+const comp = Symbol("compareFunction");
 
 export default class PriorityQueue {
     static newNaturalMin(iterator) {
@@ -68,16 +68,16 @@ export default class PriorityQueue {
             return 0;
         }, iterator);
     }
-    constructor(comparator, iterable) {
-        if (typeof comparator !== "function") {
-            throw new Error("PriorityQueue: no comparator function defined");
+    constructor(compareFunction, iterable) {
+        if (typeof compareFunction !== "function") {
+            throw new Error("PriorityQueue: no compareFunction defined");
         }
-        this[comp] = comparator;
+        this[comp] = compareFunction;
 
         if (iterable === undefined) {
             this[data] = [];
         } else {
-            this[data] = heapify(Array.from(iterable), comparator);
+            this[data] = heapify(Array.from(iterable), compareFunction);
         }
     }
     add(item) {
