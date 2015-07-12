@@ -1,7 +1,3 @@
-/*
- * SortedMap, SortedSet, PriorityQueue
- */
-
 import Stack from "./Stack";
 import Queue from "./Queue";
 import PriorityQueue from "./PriorityQueue";
