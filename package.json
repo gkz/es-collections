@@ -1,7 +1,7 @@
 {
   "name": "es-collections",
   "version": "0.0.1",
-  "description": "ES6/ES2015 collection library including Stack, Queue, and PriorityQueue",
+  "description": "ES6/ES2015 collections library including Stack, Queue, and PriorityQueue",
   "files": [
     "package.json",
     "README.md",
