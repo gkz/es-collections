@@ -9,8 +9,9 @@ You can simulate a stack and a queue with a JavaScript array, but using the coll
 - **Provides clarity of intent** to your fellow programmers (eg. when they see `new Queue()` they know exactly what you want to do, while using an array, your intentions are ambiguous - should they add an item to the front, or the back?)
 - **Avoids bugs** by disallowing unwanted behaviour (eg. shifting a stack)
 
-*Skip to API:*
-[Stack](#stack) | [Queue](#queue) | [PriorityQueue](#priorityqueue)
+For updates on es-collections, [follow me on twitter](https://twitter.com/gkzahariev).
+
+*Skip to API:* [Stack](#stack) | [Queue](#queue) | [PriorityQueue](#priorityqueue)
 
 ## Examples
 ```js
