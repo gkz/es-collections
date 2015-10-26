@@ -32,7 +32,7 @@ function sink(data, compareFunction, index) {
                 && compareFunction(data[targetIndex + 1], data[targetIndex]) < 0) {
             targetIndex++;
         }
-        if (compareFunction(data[index], data[targetIndex]) <= 0) {
+        if (compareFunction(value, data[targetIndex]) <= 0) {
             break;
         }
         data[index] = data[targetIndex];
