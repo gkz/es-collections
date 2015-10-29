@@ -1,6 +1,6 @@
 {
   "name": "es-collections",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ES6/ES2015 collections library including Stack, Queue, and PriorityQueue",
   "homepage": "https://github.com/gkz/es-collections",
   "files": [
