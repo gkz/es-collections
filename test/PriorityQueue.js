@@ -45,12 +45,12 @@ suite("PriorityQueue", () => {
         q.add(37);
         q.add(53);
         equal(q.remove(), 37);
- 
+
         q.add(57);
         q.add(53);
         equal(q.remove(), 53);
         equal(q.remove(), 53);
- 
+
         q.add(60);
         q.add(58);
         q.add(72);
