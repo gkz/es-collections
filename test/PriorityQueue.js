@@ -37,6 +37,34 @@ suite("PriorityQueue", () => {
         equal(q.remove(), 4);
         equal(q.size, 0);
     });
+
+    test("min pq with intermixed add and remove", () => {
+        const q = PriorityQueue.newNaturalMin();
+        q.add(56);
+        q.add(73);
+        q.add(37);
+        q.add(53);
+        equal(q.remove(), 37);
+ 
+        q.add(57);
+        q.add(53);
+        equal(q.remove(), 53);
+        equal(q.remove(), 53);
+ 
+        q.add(60);
+        q.add(58);
+        q.add(72);
+        q.add(73);
+        equal(q.remove(), 56);
+        equal(q.remove(), 57);
+        equal(q.remove(), 58);
+        equal(q.remove(), 60);
+        equal(q.remove(), 72);
+        equal(q.remove(), 73);
+        equal(q.remove(), 73);
+        equal(q.size, 0);
+    });
+
     test("natural max", () => {
         const q = PriorityQueue.newNaturalMax();
         q.add(3);
@@ -88,6 +116,7 @@ suite("PriorityQueue", () => {
         equal(q.remove(), 1);
         equal(q.remove(), 2);
     });
+
     test("chained add", () => {
         const q = PriorityQueue.newNaturalMin();
         q.add(3).add(1);
