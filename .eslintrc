@@ -1,7 +1,9 @@
 env:
-    es6: true
-ecmaFeatures:
-    modules: true
+    es6: true,
+    node: true
+parserOptions:
+  ecmaVersion: 6
+  sourceType: module
 rules:
     array-bracket-spacing: [2, "never"]
     indent: 2

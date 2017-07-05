@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        },
+        "debug": true
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "sourceMaps": "inline"
+    },
+    "test": {
+      "sourceMaps": "inline"
+    }
+  }
+}

@@ -10,11 +10,11 @@
     "*.js"
   ],
   "scripts": {
-    "test": "node_modules/.bin/mocha --ui tdd --compilers js:babel/register",
+    "test": "mocha",
     "prepublsh": "npm run-script build",
     "build": "node_modules/.bin/babel --optional runtime --out-dir . ./src",
     "clean": "rm *.js",
-    "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --ui tdd --compilers js:babel/register",
+    "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
     "lint": "node_modules/.bin/eslint ./src ./test"
   },
   "pre-commit": [
@@ -37,13 +37,15 @@
     "url": "https://github.com/gkz/es-collections.git"
   },
   "devDependencies": {
-    "babel": "^5.6.14",
-    "eslint": "^0.24.0",
-    "istanbul": "^0.3.17",
-    "mocha": "^2.2.5",
+    "babel": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
+    "eslint": "^4.1.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2",
     "pre-commit": "^1.0.10"
   },
   "dependencies": {
-    "babel-runtime": "^5.6.17"
+    "babel-runtime": "^6.23.0"
   }
 }
