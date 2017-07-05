@@ -11,11 +11,11 @@
   ],
   "scripts": {
     "test": "mocha",
-    "prepublsh": "npm run-script build",
-    "build": "node_modules/.bin/babel --optional runtime --out-dir . ./src",
+    "prepublish": "npm run build",
+    "build": "babel --optional runtime --out-dir . ./src",
     "clean": "rm *.js",
     "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha",
-    "lint": "node_modules/.bin/eslint ./src ./test"
+    "lint": "eslint ./src ./test"
   },
   "pre-commit": [
     "test",
@@ -37,7 +37,7 @@
     "url": "https://github.com/gkz/es-collections.git"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.24.1",
     "eslint": "^4.1.1",
