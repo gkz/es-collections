@@ -4,12 +4,15 @@
       "env",
       {
         "targets": {
-          "browsers": "> 5%"
+          "browsers": "> 5%",
+          "uglify": true
         },
+        "modules": "commonjs",
         "debug": true
       }
     ]
   ],
+  "plugins": ["transform-runtime"],
   "env": {
     "development": {
       "sourceMaps": "inline"
